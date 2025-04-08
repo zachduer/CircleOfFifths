@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class RuneLineDrawer : MonoBehaviour
 {
-    public MouseSliceTracker mouseSliceTracker;
+    public RuneInterfaceController runeInterfaceController;
 
     private TrailRenderer trail;
     private Camera mainCamera;
 
     private void Awake()
     {
-        mouseSliceTracker.OnSliceEntered += HandleSliceEntered;
+        runeInterfaceController.OnSliceClicked += HandleSliceClicked;
         trail = GetComponent<TrailRenderer>();
     }
 
@@ -24,9 +24,9 @@ public class RuneLineDrawer : MonoBehaviour
         
     }
 
-    void HandleSliceEntered(int slice)
+    void HandleSliceClicked(int slice)
     {
-        Debug.Log("RuneLineDrawer -> Slice entered: " + slice);
+        Debug.Log("RuneLineDrawer -> Slice clicked: " + slice);
 
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = 10f; // Set depth for world position conversion
