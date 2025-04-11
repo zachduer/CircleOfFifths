@@ -426,6 +426,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.43f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scripts/CircleOfFifthsController.cs"
 "Assets/Scripts/LineDraw.cs"
+"Assets/Scripts/RuneDisplayController.cs"
 "Assets/Scripts/RuneInterfaceController.cs"
 "Assets/Scripts/RuneLineDrawer.cs"
 "Assets/Scripts/TriggerRuneNote.cs"

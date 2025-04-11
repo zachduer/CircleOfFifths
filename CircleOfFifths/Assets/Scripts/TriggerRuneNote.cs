@@ -3,6 +3,8 @@ using UnityEngine;
 public class TriggerRuneNote : MonoBehaviour
 {
     public RuneInterfaceController runeInterfaceController;
+    public AudioSource ambientNotesSource;
+    public AudioSource playedNotesSource;
 
     public AudioClip audioClipClickA;
     public AudioClip audioClipClickB;
@@ -20,14 +22,14 @@ public class TriggerRuneNote : MonoBehaviour
     public AudioClip audioClipHoverF;
     public AudioClip audioClipHoverG;
 
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
 
     private void Awake()
     {
         runeInterfaceController.OnSliceEntered += HandleSliceEntered;
         runeInterfaceController.OnSliceClicked += HandleSliceClicked;
 
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
     void Start()
     {
@@ -45,40 +47,40 @@ public class TriggerRuneNote : MonoBehaviour
         Debug.Log("TriggerMusic -> Slice entered: " + slice);
         if(slice < 0)
         {
-            audioSource.Stop();
+            ambientNotesSource.Stop();
             return;
         }
 
         if (slice == 0)
         {
-            audioSource.clip = audioClipHoverA;
+            ambientNotesSource.clip = audioClipHoverA;
         }
         if (slice == 1)
         {
-            audioSource.clip = audioClipHoverB;
+            ambientNotesSource.clip = audioClipHoverB;
         }
         if (slice == 2)
         {
-            audioSource.clip = audioClipHoverC;
+            ambientNotesSource.clip = audioClipHoverC;
         }
         if (slice == 3)
         {
-            audioSource.clip = audioClipHoverD;
+            ambientNotesSource.clip = audioClipHoverD;
         }
         if (slice == 4)
         {
-            audioSource.clip = audioClipHoverE;
+            ambientNotesSource.clip = audioClipHoverE;
         }
         if (slice == 5)
         {
-            audioSource.clip = audioClipHoverF;
+            ambientNotesSource.clip = audioClipHoverF;
         }
         if (slice == 6)
         {
-            audioSource.clip = audioClipHoverG;
+            ambientNotesSource.clip = audioClipHoverG;
         }
 
-        audioSource.Play();
+        ambientNotesSource.Play();
     }
 
     void HandleSliceClicked(int slice)
@@ -87,34 +89,34 @@ public class TriggerRuneNote : MonoBehaviour
 
         if (slice == 0)
         {
-            audioSource.clip = audioClipClickA;
+            playedNotesSource.clip = audioClipClickA;
         }
         if (slice == 1)
         {
-            audioSource.clip = audioClipClickB;
+            playedNotesSource.clip = audioClipClickB;
         }
         if (slice == 2)
         {
-            audioSource.clip = audioClipClickC;
+            playedNotesSource.clip = audioClipClickC;
         }
         if (slice == 3)
         {
-            audioSource.clip = audioClipClickD;
+            playedNotesSource.clip = audioClipClickD;
         }
         if (slice == 4)
         {
-            audioSource.clip = audioClipClickE;
+            playedNotesSource.clip = audioClipClickE;
         }
         if (slice == 5)
         {
-            audioSource.clip = audioClipClickF;
+            playedNotesSource.clip = audioClipClickF;
         }
         if (slice == 6)
         {
-            audioSource.clip = audioClipClickG;
+            playedNotesSource.clip = audioClipClickG;
         }
 
-        audioSource.Play();
+        playedNotesSource.Play();
 
     }
 }

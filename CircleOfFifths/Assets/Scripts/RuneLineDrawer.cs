@@ -10,6 +10,7 @@ public class RuneLineDrawer : MonoBehaviour
     private void Awake()
     {
         runeInterfaceController.OnSliceClicked += HandleSliceClicked;
+        runeInterfaceController.OnRuneSubmitted += HandleRuneSubmitted;
         trail = GetComponent<TrailRenderer>();
     }
 
@@ -35,5 +36,10 @@ public class RuneLineDrawer : MonoBehaviour
 
         // Move trail renderer to follow the mouse
         trail.transform.position = worldPosition;
+    }
+
+    void HandleRuneSubmitted()
+    {
+        trail.Clear();
     }
 }

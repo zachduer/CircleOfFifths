@@ -15,6 +15,8 @@ public class RuneInterfaceController : MonoBehaviour, IPointerDownHandler, IPoin
     public Image FGlow;
     public Image GGlow;
 
+    public Image CircleSpellcastGlow;
+
     private RectTransform rectTransform;
     private bool isDrawing = false;
     private int currentSlice = -1;  // No slice at the start
@@ -24,6 +26,7 @@ public class RuneInterfaceController : MonoBehaviour, IPointerDownHandler, IPoin
 
     public event Action<int> OnSliceEntered;  // Event for entering a new slice
     public event Action<int> OnSliceClicked;  // Event for clicking a slice
+    public event Action OnRuneSubmitted;  // Event for submitting the rune
 
 
 
@@ -58,6 +61,8 @@ public class RuneInterfaceController : MonoBehaviour, IPointerDownHandler, IPoin
 
         clickedSlices.Clear();
         //clickedSliceOrder.Clear();
+
+        OnRuneSubmitted?.Invoke(); // Fire event
     }
 
     public void OnPointerDown(PointerEventData eventData)
