@@ -1,0 +1,54 @@
+{
+    "name": "IA_CustomActions",
+    "maps": [
+        {
+            "name": "Main",
+            "id": "6bd99b2a-1490-4fe3-b686-b30a4c12fe3b",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "7fece056-0889-47d7-ae06-20c73a0d9f42",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Circle",
+                    "type": "Button",
+                    "id": "8413a721-2f55-41ba-aafb-419661caa8ef",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ae77ab00-0393-480a-a624-1e2000ba8110",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89ee90cd-0ac8-4bbd-80a9-de4395aec128",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Circle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

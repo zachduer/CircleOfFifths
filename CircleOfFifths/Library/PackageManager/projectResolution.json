@@ -19,13 +19,13 @@
       "source": "builtin",
       "testable": false
     },
-    "com.unity.ai.navigation@2.0.6": {
+    "com.unity.ai.navigation@2.0.7": {
       "name": "com.unity.ai.navigation",
       "displayName": "AI Navigation",
-      "resolvedPath": "C:\\Users\\mtf60\\Documents\\Unity\\CircleOfFifths\\CircleOfFifths\\Library\\PackageCache\\com.unity.ai.navigation@c74b2724ed42",
-      "fingerprint": "c74b2724ed42c1aa0380e294156d7f54a7ae2ec6",
-      "editorCompatibility": "2023.2.0a18",
-      "version": "2.0.6",
+      "resolvedPath": "C:\\Users\\mtf60\\Documents\\Unity\\CircleOfFifths\\CircleOfFifths\\Library\\PackageCache\\com.unity.ai.navigation@39ae74efb85f",
+      "fingerprint": "39ae74efb85f9b44dc389774fc59c2ce4a8aa3b6",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "2.0.7",
       "source": "registry",
       "testable": false
     },
