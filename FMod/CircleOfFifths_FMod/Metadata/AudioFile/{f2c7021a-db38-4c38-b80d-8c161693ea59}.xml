@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{f2c7021a-db38-4c38-b80d-8c161693ea59}">
+		<property name="assetPath">
+			<value>AJ Background Music/Ambience 1 (with BG Piano).wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>96</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{98d3af6b-95a0-4572-a628-9a867eeea380}</destination>
+		</relationship>
+	</object>
+</objects>

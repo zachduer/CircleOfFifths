@@ -1,8 +1,12 @@
 using UnityEngine;
+using FMODUnity;
 
 public class TriggerRuneNote : MonoBehaviour
 {
     public RuneInterfaceController runeInterfaceController;
+
+    public StudioEventEmitter ambientNotesEmitter;
+
     public AudioSource ambientNotesSource;
     public AudioSource playedNotesSource;
 
@@ -47,40 +51,41 @@ public class TriggerRuneNote : MonoBehaviour
         Debug.Log("TriggerMusic -> Slice entered: " + slice);
         if(slice < 0)
         {
-            ambientNotesSource.Stop();
+            //ambientNotesSource.Stop();
             return;
         }
 
         if (slice == 0)
         {
-            ambientNotesSource.clip = audioClipHoverA;
+            ambientNotesEmitter.Play();
+            //ambientNotesSource.clip = audioClipHoverA;
         }
         if (slice == 1)
         {
-            ambientNotesSource.clip = audioClipHoverB;
+            //ambientNotesSource.clip = audioClipHoverB;
         }
         if (slice == 2)
         {
-            ambientNotesSource.clip = audioClipHoverC;
+            //ambientNotesSource.clip = audioClipHoverC;
         }
         if (slice == 3)
         {
-            ambientNotesSource.clip = audioClipHoverD;
+            //ambientNotesSource.clip = audioClipHoverD;
         }
         if (slice == 4)
         {
-            ambientNotesSource.clip = audioClipHoverE;
+            //ambientNotesSource.clip = audioClipHoverE;
         }
         if (slice == 5)
         {
-            ambientNotesSource.clip = audioClipHoverF;
+            //ambientNotesSource.clip = audioClipHoverF;
         }
         if (slice == 6)
         {
-            ambientNotesSource.clip = audioClipHoverG;
+            //ambientNotesSource.clip = audioClipHoverG;
         }
 
-        ambientNotesSource.Play();
+        //ambientNotesSource.Play();
     }
 
     void HandleSliceClicked(int slice)

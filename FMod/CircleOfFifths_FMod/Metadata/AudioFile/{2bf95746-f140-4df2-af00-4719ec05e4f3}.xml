@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{2bf95746-f140-4df2-af00-4719ec05e4f3}">
+		<property name="assetPath">
+			<value>AJ Circle Notes/Ambient Note (C).wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>92.307687074829929</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{98d3af6b-95a0-4572-a628-9a867eeea380}</destination>
+		</relationship>
+	</object>
+</objects>
