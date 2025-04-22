@@ -3,8 +3,8 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 .utmp/
-#CircleOfFifths/[Ll]ibrary/
-#CircleOfFifths/[Tt]emp/
+CircleOfFifths/[Ll]ibrary/
+CircleOfFifths/[Tt]emp/
 CircleOfFifths/[Oo]bj/
 CircleOfFifths/[Bb]uild/
 CircleOfFifths/[Bb]uilds/
