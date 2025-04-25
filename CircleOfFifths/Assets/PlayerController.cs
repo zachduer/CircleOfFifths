@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,6 +16,13 @@ public class PlayerController : MonoBehaviour
     [Header("canvas")]
     public Canvas canvas;
     public GameObject Line;
+    public GameObject Inventory;
+    public GameObject Scroll1;
+    public GameObject Scroll2;
+
+    [Header("chests")]
+    [SerializeField] LayerMask chest1;
+    [SerializeField] LayerMask chest2;
 
     float lookRotationSpeed = 8f;
 
@@ -44,6 +52,7 @@ public class PlayerController : MonoBehaviour
             spaceDown = true;
             Line.SetActive(true);
             canvas.gameObject.SetActive(true);
+            Inventory.SetActive(true);
         }
     }
 
@@ -55,6 +64,7 @@ public class PlayerController : MonoBehaviour
             spaceDown = false;
             Line.SetActive(false);
             canvas.gameObject.SetActive(false);
+            Inventory.SetActive(false);
         }
     }
         
@@ -63,7 +73,17 @@ public class PlayerController : MonoBehaviour
         if (spaceDown == false)
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f, clickableLayers))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f, chest1))
+            {
+                //Debug.Log("Hit Chest 1");
+                Scroll1.SetActive(true);
+            }
+            else if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f, chest2))
+            {
+                //Debug.Log("Hit Chest 2");
+                Scroll2.SetActive(true);
+            }
+            else if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100f, clickableLayers))
             {
                 agent.destination = hit.point;
                 if (clickEffect != null)
